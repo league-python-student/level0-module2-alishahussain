@@ -1,3 +1,4 @@
+import sys
 import tkinter as tk
 from tkinter import simpledialog, Tk
 from PIL import Image, ImageTk
@@ -13,12 +14,22 @@ def animals():
 
     # TODO 1. Ask the user which animal they want, then see and
     #  hear the animal they chose using one of the methods below.
-
+    for i in range(100):
+        animal = simpledialog.askstring(title='none', prompt='Which animal do you want?')
     # TODO 2. Make it so that the user can keep entering new animals.
-
+        if animal == 'cat':
+            meow()
+        if animal == 'cow':
+            moo()
+        if animal == 'dog':
+            woof()
+        if animal == 'duck':
+            quack()
+        if animal == 'llama':
+            llama_scream()
     # TODO 3. If the user enters 'exit', stop the program
-
-
+        if animal == 'exit':
+            quit()
 # ======================= DO NOT EDIT THE CODE BELOW =========================
 
 def show_image(filename=None):
